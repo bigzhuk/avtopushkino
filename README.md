@@ -1,2 +1,0 @@
-# avtopushkino
-# avtopushkino
