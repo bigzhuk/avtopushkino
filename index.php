@@ -51,7 +51,7 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
-        <title>Веб-сервис Autopiter</title>
+        <title>Веб-сервис Автопушкино</title>
         <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/common.css" rel="stylesheet" />
     </head>
