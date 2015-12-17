@@ -10,17 +10,18 @@ class ModelSupplierAutopiter extends Model implements SupplierInteractionInterfa
     private $soap_client = null;
 
 
-
     public function sayHello() {
-        $str = '';
+        $str = '1605808'; // колодки опель
         $result = $this->getSoapClient()->FindCatalog (array("ShortNumberDetail"=>$str));
         $items = $result->FindCatalogResult->SearchedTheCatalog;
-
-var_dump($items);
+        var_dump($items);
         return 'hello';
     }
 
     public function getSoapClient() {
+        if($this->soap_client === null) {
+            $this->setSoapClient();
+        }
         return $this->soap_client;
     }
 
