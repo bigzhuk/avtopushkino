@@ -11,6 +11,11 @@ class ControllerProductSearch extends Controller {
 
 		$this->load->model('supplier/autopiter');
 
+		$this->load->admin_model('catalog/product');
+
+		$this->model_supplier_autopiter->addPartToCatalog();
+
+
 		if (isset($this->request->get['search'])) {
 			$search = $this->request->get['search'];
 		} else {
@@ -132,7 +137,7 @@ class ControllerProductSearch extends Controller {
 		}
 
 		$data['text_empty'] = $this->language->get('text_empty');
-		$data['text_search'] = $this->language->get('text_search').$this->model_supplier_autopiter->sayHello();
+		$data['text_search'] = $this->language->get('text_search'); //$this->model_supplier_autopiter->sayHello();
 		$data['text_keyword'] = $this->language->get('text_keyword');
 		$data['text_category'] = $this->language->get('text_category');
 		$data['text_sub_category'] = $this->language->get('text_sub_category');

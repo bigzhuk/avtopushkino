@@ -67,6 +67,22 @@ final class Loader {
 		// $this->event->trigger('post.model.' . str_replace('/', '.', (string)$model), $output);
 	}
 
+	public function admin_model($model) {
+		$model = str_replace('../', '', (string)$model);
+		$file = '/var/www/user/data/www/autoservice.minon.ru/admin/model/' . $model . '.php';
+		$class = 'Model' . preg_replace('/[^a-zA-Z0-9]/', '', $model);
+
+		if (file_exists($file)) {
+			include_once($file);
+
+			$this->registry->set('admin_model_' . str_replace('/', '_', $model), new $class($this->registry));
+		} else {
+			trigger_error('Error: Could not load admin_model ' . $file . '!');
+			exit();
+		}
+
+	}
+
 	public function view($template, $data = array()) {
 		// $this->event->trigger('pre.view.' . str_replace('/', '.', $template), $data);
 

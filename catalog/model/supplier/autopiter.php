@@ -36,7 +36,7 @@ class ModelSupplierAutopiter extends Model implements SupplierInteractionInterfa
     }
 
     public function addPartToCatalog() {
-
+        var_dump($this->registry);
     }
 
     public function deletePartFromCatalog() {

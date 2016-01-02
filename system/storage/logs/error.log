@@ -64,3 +64,6 @@
 2015-11-29 20:46:20 - PHP Notice:  Trying to get property of non-object in /var/www/user/data/www/autoservice.minon.ru/system/library/cart.php on line 37
 2015-11-29 20:46:20 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/user/data/www/autoservice.minon.ru/system/library/cart.php on line 37
 2015-12-17 20:50:10 - PHP Notice:  Error: Could not load model /var/www/avtopushkino/catalog/model/supplier/parts.php! in /var/www/avtopushkino/system/engine/loader.php on line 63
+2016-01-02 17:45:10 - PHP Notice:  Error: Could not load admin_model /var/www/user/data/www/autoservice.minon.ru/admin/model/catalog/product.php! in /var/www/avtopushkino/system/engine/loader.php on line 80
+2016-01-02 17:45:30 - PHP Notice:  Error: Could not load admin_model /var/www/user/data/www/autoservice.minon.ru/admin/model/catalog/product.php! in /var/www/avtopushkino/system/engine/loader.php on line 80
+2016-01-02 17:47:43 - PHP Notice:  Error: Could not load admin_model /var/www/user/data/www/autoservice.minon.ru/admin/model/catalog/product.php! in /var/www/avtopushkino/system/engine/loader.php on line 80
