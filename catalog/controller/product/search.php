@@ -11,8 +11,6 @@ class ControllerProductSearch extends Controller {
 
 		$this->load->model('supplier/autopiter');
 
-		$this->load->admin_model('catalog/product');
-
 		$this->model_supplier_autopiter->addPartToCatalog();
 
 
