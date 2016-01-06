@@ -68,3 +68,17 @@
 2016-01-02 17:45:30 - PHP Notice:  Error: Could not load admin_model /var/www/user/data/www/autoservice.minon.ru/admin/model/catalog/product.php! in /var/www/avtopushkino/system/engine/loader.php on line 80
 2016-01-02 17:47:43 - PHP Notice:  Error: Could not load admin_model /var/www/user/data/www/autoservice.minon.ru/admin/model/catalog/product.php! in /var/www/avtopushkino/system/engine/loader.php on line 80
 2016-01-02 19:27:15 - PHP Notice:  Error: Could not load admin_model /var/www/user/data/www/autoservice.minon.ru/admin/model/catalog/product.php! in /var/www/avtopushkino/system/engine/loader.php on line 80
+2016-01-04 18:21:37 - PHP Notice:  Undefined property: stdClass::$SearchedTheCatalog in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 17
+2016-01-04 18:22:25 - PHP Notice:  Undefined property: stdClass::$SearchedTheCatalog in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 17
+2016-01-04 18:22:31 - PHP Notice:  Undefined property: stdClass::$SearchedTheCatalog in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 17
+2016-01-06 10:52:19 - PHP Notice:  Undefined property: stdClass::$SearchedTheCatalog in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 17
+2016-01-06 10:54:15 - PHP Notice:  Undefined property: stdClass::$SearchedTheCatalog in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 17
+2016-01-06 11:21:38 - PHP Notice:  Undefined property: stdClass::$GetPriceIdResult in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 192
+2016-01-06 11:21:38 - PHP Notice:  Trying to get property of non-object in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 192
+2016-01-06 11:23:10 - PHP Notice:  Undefined property: stdClass::$GetPriceIdResult in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 192
+2016-01-06 11:23:10 - PHP Notice:  Trying to get property of non-object in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 192
+2016-01-06 11:27:46 - PHP Notice:  Undefined property: stdClass::$GetPriceIdResult in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 192
+2016-01-06 11:28:22 - PHP Notice:  Undefined property: stdClass::$GetPriceIdResult in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 195
+2016-01-06 11:28:22 - PHP Notice:  Trying to get property of non-object in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 195
+2016-01-06 11:28:47 - PHP Notice:  Undefined property: stdClass::$GetPriceIdResult in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 192
+2016-01-06 11:29:19 - PHP Notice:  Undefined property: stdClass::$GetPriceIdResult in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 192

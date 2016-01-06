@@ -9,15 +9,6 @@ class ModelSupplierAutopiter extends Model implements SupplierInteractionInterfa
     private $password = 'avtopushkino';
     private $soap_client = null;
 
-
-    public function sayHello() {
-        $str = '1605808'; // колодки опель
-        $result = $this->getSoapClient()->FindCatalog (array("ShortNumberDetail"=>$str));
-        $items = $result->FindCatalogResult->SearchedTheCatalog;
-        var_dump($items);
-        return 'hello';
-    }
-
     public function getSoapClient() {
         if($this->soap_client === null) {
             $this->setSoapClient();
@@ -35,8 +26,7 @@ class ModelSupplierAutopiter extends Model implements SupplierInteractionInterfa
         }
     }
 
-    public function addPartToCatalog() {
-        $data = $this->getProductItemArray();
+    public function addPartToCatalog($data) {
 
         //Копипаста метода из admin/ModelCatalogProduct::addProduct. Из-за архетектуры без неймспейсов этот метод вызывать отсюда нельзя,
         //т.к. классы лежащие в разных папках называются одинаково. :( Приходится копипастить
@@ -179,17 +169,35 @@ class ModelSupplierAutopiter extends Model implements SupplierInteractionInterfa
         // TODO: Implement updatePartInCatalog() method.
     }
 
-    public function getPartData($supplier) {
-
+    public function getPartData() {
+        $items = array();
+        $search_str = $this->request->get['search']; //$search_str = '1605808'; - колодки опель
+        $result = $this->getSoapClient()->FindCatalog (array("ShortNumberDetail"=>$search_str));
+        $catalog_items = $result->FindCatalogResult->SearchedTheCatalog;
+        if(empty($catalog_items)) {
+            return array();
+        }
+        foreach($catalog_items as $catalog_item) {
+            $result2 = $this->getSoapClient()->GetPriceId(array("ID" => $catalog_item->id, "FormatCurrency" => 'РУБ', "SearchCross" => 0, "IdArticleDetail" => null));
+            if(!is_object($result2) || !property_exists($result2, 'GetPriceIdResult') ) {
+               continue;
+            }
+            $part_item = $result2->GetPriceIdResult->BasePriceForClient;
+            if(empty($part_item)) {
+                continue;
+            }
+            $items[] = $part_item;
+        }
+        return $items;
     }
 
-    public function getProductItemArray() {
+    public function getProductItem($product) {
         return array(
             'product_description' =>
                 array(
                     1 =>
                         array(
-                            'name' => 'хрен',
+                            'name' => $product->NameRus,
                             'description' => '&lt;p&gt;&lt;br&gt;&lt;/p&gt;',
                             'meta_title' => '',
                             'meta_h1' => '',
@@ -199,7 +207,7 @@ class ModelSupplierAutopiter extends Model implements SupplierInteractionInterfa
                         ),
                     2 =>
                         array(
-                            'name' => 'hren',
+                            'name' => $product->NameRus, //TODO обенуть в мето translate
                             'description' => '&lt;p&gt;&lt;br&gt;&lt;/p&gt;',
                             'meta_title' => '',
                             'meta_h1' => '',
@@ -210,14 +218,14 @@ class ModelSupplierAutopiter extends Model implements SupplierInteractionInterfa
                 ),
             'image' => '',
             'model' => 'rrrr',
-            'sku' => '',
-            'upc' => '',
+            'sku' => $product->Number,
+            'upc' => $product->IdDetail, // upc  - уникальный код товара
             'ean' => '',
             'jan' => '',
             'isbn' => '',
             'mpn' => '',
             'location' => '',
-            'price' => '',
+            'price' => $product->SalePrice,
             'tax_class_id' => '0',
             'quantity' => '1',
             'minimum' => '1',
@@ -225,9 +233,9 @@ class ModelSupplierAutopiter extends Model implements SupplierInteractionInterfa
             'stock_status_id' => '7',
             'shipping' => '1',
             'keyword' => '',
-            'date_available' => '2016-01-02',
+            'date_available' => $product->DeliveryDate,
             'length' => '',
-            'width' => '',
+            'width' => $product->Weight,
             'height' => '',
             'length_class_id' => '1',
             'weight' => '',

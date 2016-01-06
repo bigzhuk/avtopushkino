@@ -11,7 +11,24 @@ class ControllerProductSearch extends Controller {
 
 		$this->load->model('supplier/autopiter');
 
-		$this->model_supplier_autopiter->addPartToCatalog();
+		/**
+		 * Получаем запчасти от поставщика - вынести в метод контроллера
+		 */
+		$parts = $this->model_supplier_autopiter->getPartData();
+		var_dump($parts);
+		if(is_array($parts) && !empty($parts)) {
+			foreach ($parts as $part) {
+				$product = $this->model_supplier_autopiter->getProductItem($part);
+
+				//TODO кэшируем значение на 1 день, чтобы каждый раз не дергать сервер поставщика
+				//проверяем новый ли это товар, делая запрос в БД.
+				//если новый - делаем $this->model_supplier_autopiter->addPartToCatalog();,
+				//иначе $this->model_supplier_autopiter->updatePartInCatalog();
+
+
+				$this->model_supplier_autopiter->addPartToCatalog($product);
+			}
+		}
 
 
 		if (isset($this->request->get['search'])) {
@@ -135,7 +152,7 @@ class ControllerProductSearch extends Controller {
 		}
 
 		$data['text_empty'] = $this->language->get('text_empty');
-		$data['text_search'] = $this->language->get('text_search'); //$this->model_supplier_autopiter->sayHello();
+		$data['text_search'] = $this->language->get('text_search');
 		$data['text_keyword'] = $this->language->get('text_keyword');
 		$data['text_category'] = $this->language->get('text_category');
 		$data['text_sub_category'] = $this->language->get('text_sub_category');
