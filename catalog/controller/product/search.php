@@ -1,6 +1,17 @@
 <?php
 class ControllerProductSearch extends Controller {
+	/**
+	 * @var array массив обработанных запчастей
+	 */
+	public $parts_finished = array();
+
+	/**
+	 *
+	 */
+	public $supplier_response_cache = array();
+
 	public function index() {
+
 		$this->load->language('product/search');
 
 		$this->load->model('catalog/category');
@@ -14,11 +25,37 @@ class ControllerProductSearch extends Controller {
 		/**
 		 * Получаем запчасти от поставщика - вынести в метод контроллера
 		 */
-		$parts = $this->model_supplier_autopiter->getPartData();
-		var_dump($parts);
+		$search_str = $this->request->get['search']; //$search_str = '1605808'; - колодки опель
+		$parts = !empty($this->supplier_response_cache[$search_str]) ?
+			$this->supplier_response_cache[$search_str]:
+			$this->model_supplier_autopiter->getPartData($search_str);
+		$this->supplier_response_cache[$search_str] = $parts;
+		//var_dump($parts); //Для теста: 37584 - колодки мерседес //1605808 - колодки опель
+		$parts_finished = array();
 		if(is_array($parts) && !empty($parts)) {
 			foreach ($parts as $part) {
-				$product = $this->model_supplier_autopiter->getProductItem($part);
+				if(is_array($part)) {
+					$part = $part[0];
+				}
+				if(!is_object($part)) {
+					continue;
+				}
+				if(in_array($part->IdDetail, $this->parts_finished)) {
+					continue;
+				}
+				$product_id = $this->model_catalog_product->getProductIdByUpc($part->IdDetail);
+				if($product_id) {
+					$product['id'] = $product_id;
+					$product['price'] = $part->SalePrice+10;
+					//$product['date_available'] = $part->DeliveryDate; // TODO - это другая дата!
+					$this->model_supplier_autopiter->updatePartInCatalog($product);
+				}
+				else {
+					$product = $this->model_supplier_autopiter->getProductItem($part);
+					$this->model_supplier_autopiter->addPartToCatalog($product);
+				}
+				$this->parts_finished[] = $part->IdDetail;
+
 
 				//TODO кэшируем значение на 1 день, чтобы каждый раз не дергать сервер поставщика
 				//проверяем новый ли это товар, делая запрос в БД.
@@ -26,7 +63,7 @@ class ControllerProductSearch extends Controller {
 				//иначе $this->model_supplier_autopiter->updatePartInCatalog();
 
 
-				$this->model_supplier_autopiter->addPartToCatalog($product);
+
 			}
 		}
 

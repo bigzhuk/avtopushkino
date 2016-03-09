@@ -32,7 +32,6 @@ class ModelSupplierAutopiter extends Model implements SupplierInteractionInterfa
         //т.к. классы лежащие в разных папках называются одинаково. :( Приходится копипастить
         $this->event->trigger('pre.admin.product.add', $data);
         $this->db->query("INSERT INTO " . DB_PREFIX . "product SET model = '" . $this->db->escape($data['model']) . "', sku = '" . $this->db->escape($data['sku']) . "', upc = '" . $this->db->escape($data['upc']) . "', ean = '" . $this->db->escape($data['ean']) . "', jan = '" . $this->db->escape($data['jan']) . "', isbn = '" . $this->db->escape($data['isbn']) . "', mpn = '" . $this->db->escape($data['mpn']) . "', location = '" . $this->db->escape($data['location']) . "', quantity = '" . (int)$data['quantity'] . "', minimum = '" . (int)$data['minimum'] . "', subtract = '" . (int)$data['subtract'] . "', stock_status_id = '" . (int)$data['stock_status_id'] . "', date_available = '" . $this->db->escape($data['date_available']) . "', manufacturer_id = '" . (int)$data['manufacturer_id'] . "', shipping = '" . (int)$data['shipping'] . "', price = '" . (float)$data['price'] . "', points = '" . (int)$data['points'] . "', weight = '" . (float)$data['weight'] . "', weight_class_id = '" . (int)$data['weight_class_id'] . "', length = '" . (float)$data['length'] . "', width = '" . (float)$data['width'] . "', height = '" . (float)$data['height'] . "', length_class_id = '" . (int)$data['length_class_id'] . "', status = '" . (int)$data['status'] . "', tax_class_id = '" . (int)$data['tax_class_id'] . "', sort_order = '" . (int)$data['sort_order'] . "', date_added = NOW()");
-        $this->db->query("INSERT INTO " . DB_PREFIX . "product SET model = '" . $this->db->escape($data['model']) . "', sku = '" . $this->db->escape($data['sku']) . "', upc = '" . $this->db->escape($data['upc']) . "', ean = '" . $this->db->escape($data['ean']) . "', jan = '" . $this->db->escape($data['jan']) . "', isbn = '" . $this->db->escape($data['isbn']) . "', mpn = '" . $this->db->escape($data['mpn']) . "', location = '" . $this->db->escape($data['location']) . "', quantity = '" . (int)$data['quantity'] . "', minimum = '" . (int)$data['minimum'] . "', subtract = '" . (int)$data['subtract'] . "', stock_status_id = '" . (int)$data['stock_status_id'] . "', date_available = '" . $this->db->escape($data['date_available']) . "', manufacturer_id = '" . (int)$data['manufacturer_id'] . "', shipping = '" . (int)$data['shipping'] . "', price = '" . (float)$data['price'] . "', points = '" . (int)$data['points'] . "', weight = '" . (float)$data['weight'] . "', weight_class_id = '" . (int)$data['weight_class_id'] . "', length = '" . (float)$data['length'] . "', width = '" . (float)$data['width'] . "', height = '" . (float)$data['height'] . "', length_class_id = '" . (int)$data['length_class_id'] . "', status = '" . (int)$data['status'] . "', tax_class_id = '" . (int)$data['tax_class_id'] . "', sort_order = '" . (int)$data['sort_order'] . "', date_added = NOW()");
 
         $product_id = $this->db->getLastId();
 
@@ -154,9 +153,9 @@ class ModelSupplierAutopiter extends Model implements SupplierInteractionInterfa
             }
         }
 
-        $this->cache->delete('product');
+        $this->cache->delete('product'); //TODO разоабраться как здесь устроен кэш
 
-        $this->event->trigger('post.admin.product.add', $product_id);
+        $this->event->trigger('post.admin.product.add', $product_id); //TODO разобраться что это такое...
 
         return $product_id;
     }
@@ -165,13 +164,16 @@ class ModelSupplierAutopiter extends Model implements SupplierInteractionInterfa
 
     }
 
-    public function updatePartInCatalog() {
-        // TODO: Implement updatePartInCatalog() method.
+    public function updatePartInCatalog($product_data) {
+        $sql = "UPDATE " . DB_PREFIX . "product SET
+         price =  '".(float)$product_data['price']."',
+         date_available = '".$this->db->escape($product_data['date_available'])."'
+         WHERE product_id = '" . (int)$product_data['id'] . "'";
+        return $this->db->query($sql);
     }
 
-    public function getPartData() {
+    public function getPartData($search_str) {
         $items = array();
-        $search_str = $this->request->get['search']; //$search_str = '1605808'; - колодки опель
         $result = $this->getSoapClient()->FindCatalog (array("ShortNumberDetail"=>$search_str));
         $catalog_items = $result->FindCatalogResult->SearchedTheCatalog;
         if(empty($catalog_items)) {

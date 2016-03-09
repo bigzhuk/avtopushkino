@@ -82,3 +82,52 @@
 2016-01-06 11:28:22 - PHP Notice:  Trying to get property of non-object in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 195
 2016-01-06 11:28:47 - PHP Notice:  Undefined property: stdClass::$GetPriceIdResult in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 192
 2016-01-06 11:29:19 - PHP Notice:  Undefined property: stdClass::$GetPriceIdResult in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 192
+2016-01-10 11:00:34 - PHP Notice:  Trying to get property of non-object in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 200
+2016-01-10 11:00:34 - PHP Notice:  Trying to get property of non-object in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 210
+2016-01-10 11:00:34 - PHP Notice:  Trying to get property of non-object in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 221
+2016-01-10 11:00:34 - PHP Notice:  Trying to get property of non-object in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 222
+2016-01-10 11:00:34 - PHP Notice:  Trying to get property of non-object in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 228
+2016-01-10 11:00:34 - PHP Notice:  Trying to get property of non-object in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 236
+2016-01-10 11:00:34 - PHP Notice:  Trying to get property of non-object in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 238
+2016-01-10 16:42:29 - PHP Notice:  Undefined index: id in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 172
+2016-01-10 16:42:29 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE product_id = '0'' at line 4<br />Error No: 1064<br />UPDATE oc_product SET
+         price =  '1617.36',
+         date_available = '2016-01-18T00:00:00',
+         WHERE product_id = '0' in /var/www/avtopushkino/system/library/db/mysqli.php on line 41
+2016-01-10 16:42:29 - PHP Notice:  Undefined index: id in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 172
+2016-01-10 16:42:29 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE product_id = '0'' at line 4<br />Error No: 1064<br />UPDATE oc_product SET
+         price =  '1756.78',
+         date_available = '2016-01-12T00:00:00',
+         WHERE product_id = '0' in /var/www/avtopushkino/system/library/db/mysqli.php on line 41
+2016-01-10 16:43:31 - PHP Notice:  Undefined index: id in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 172
+2016-01-10 16:43:31 - PHP Notice:  Undefined index: id in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 172
+2016-01-11 7:50:17 - PHP Warning:  SoapClient::__doRequest(): connect() failed: No route to host in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 22
+2016-01-11 7:50:43 - PHP Warning:  SoapClient::__doRequest(): connect() failed: No route to host in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 22
+2016-01-11 7:51:22 - PHP Warning:  SoapClient::__doRequest(): connect() failed: No route to host in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 22
+2016-01-11 7:52:36 - PHP Warning:  SoapClient::__doRequest(): connect() failed: No route to host in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 22
+2016-01-11 7:53:19 - PHP Warning:  SoapClient::__doRequest(): connect() failed: No route to host in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 22
+2016-01-11 20:19:40 - PHP Notice:  Undefined property: stdClass::$SearchedTheCatalog in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 180
+2016-01-24 11:02:16 - PHP Notice:  Trying to get property of non-object in /var/www/avtopushkino/catalog/controller/product/search.php on line 25
+2016-01-24 11:02:20 - PHP Notice:  Trying to get property of non-object in /var/www/avtopushkino/catalog/controller/product/search.php on line 28
+2016-01-24 11:02:35 - PHP Notice:  Trying to get property of non-object in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 204
+2016-01-24 11:02:35 - PHP Notice:  Trying to get property of non-object in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 214
+2016-01-24 11:02:35 - PHP Notice:  Trying to get property of non-object in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 225
+2016-01-24 11:02:35 - PHP Notice:  Trying to get property of non-object in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 226
+2016-01-24 11:02:35 - PHP Notice:  Trying to get property of non-object in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 232
+2016-01-24 11:02:35 - PHP Notice:  Trying to get property of non-object in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 240
+2016-01-24 11:02:35 - PHP Notice:  Trying to get property of non-object in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 242
+2016-01-24 11:02:40 - PHP Notice:  Trying to get property of non-object in /var/www/avtopushkino/catalog/controller/product/search.php on line 39
+2016-01-24 11:02:40 - PHP Notice:  Trying to get property of non-object in /var/www/avtopushkino/catalog/controller/product/search.php on line 25
+2016-01-24 11:02:40 - PHP Notice:  Trying to get property of non-object in /var/www/avtopushkino/catalog/controller/product/search.php on line 25
+2016-01-24 11:09:06 - PHP Notice:  Undefined property: stdClass::$SearchedTheCatalog in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 180
+2016-01-24 11:11:05 - PHP Notice:  Undefined property: stdClass::$SearchedTheCatalog in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 180
+2016-01-24 11:11:22 - PHP Notice:  Undefined property: stdClass::$SearchedTheCatalog in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 180
+2016-01-24 11:11:44 - PHP Notice:  Undefined property: stdClass::$SearchedTheCatalog in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 180
+2016-01-24 11:13:38 - PHP Notice:  Undefined property: stdClass::$SearchedTheCatalog in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 180
+2016-01-24 11:13:58 - PHP Notice:  Undefined property: stdClass::$SearchedTheCatalog in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 180
+2016-01-24 11:15:25 - PHP Notice:  Undefined index: date_available in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 171
+2016-01-24 11:15:25 - PHP Notice:  Undefined index: date_available in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 171
+2016-01-24 11:15:25 - PHP Notice:  Undefined index: date_available in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 171
+2016-01-24 11:25:45 - PHP Notice:  Undefined index: date_available in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 170
+2016-01-24 11:25:45 - PHP Notice:  Undefined index: date_available in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 170
+2016-01-24 11:25:45 - PHP Notice:  Undefined index: date_available in /var/www/avtopushkino/catalog/model/supplier/autopiter.php on line 170

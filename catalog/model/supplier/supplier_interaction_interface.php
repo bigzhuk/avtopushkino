@@ -25,15 +25,17 @@ interface SupplierInteractionInterface {
      * У каждого товара должен быть уникальный ID, который есть на сервере поставщика и у нас в БД.
      * По этому ID мы можем сделать вывод, что товар уже есть у нас в БД, и обновлять его,
      * а не добавлять новый каждый раз при поиске или иный действиях.
+     * @param array $product_data массив данных о продукте.
      * @return mixed
      */
-    public function updatePartInCatalog();
+    public function updatePartInCatalog($product_data);
 
     /**
      * Возвращает данные о товаре, полученные от поставщика
+     * @param $search_str
      * @return mixed
      */
-    public function getPartData();
+    public function getPartData($search_str);
 
     /**
      * Возвращает стуктуру продукта в виде массива, используемого внутри opencart
