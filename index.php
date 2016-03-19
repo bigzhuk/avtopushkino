@@ -1,7 +1,5 @@
 <?php
 
-echo 'bbb';
-die;
 // Version
 define('VERSION', '2.1.0.1');
 ini_set("display_errors",1);
