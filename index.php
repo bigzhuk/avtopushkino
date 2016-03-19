@@ -1,7 +1,6 @@
 <?php
 
-echo 'aaaa';
-echo 'aaa';
+echo 'bbb';
 die;
 // Version
 define('VERSION', '2.1.0.1');
