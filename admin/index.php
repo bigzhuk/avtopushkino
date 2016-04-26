@@ -1,177 +1,70 @@
 <?php
-// Version
-define('VERSION', '2.1.0.1');
+require_once('config.php');
+require_once('models/users.class.php');
+?>
+<head>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<script src="js.js"></script>
+	<link rel="stylesheet/less" href="style.less">
+	<script src="../js/less.js"></script>
+    <script src="../js/login_substitute.js" type="text/javascript"></script>
+    <script src="../js/auth.js" type="text/javascript"></script>
 
-// Configuration
-if (is_file('config.php')) {
-	require_once('config.php');
+	<script src="../js/kladr.js" type="text/javascript"></script>
+</head>
+<span class='error'></span><br/>
+<?php
+if(empty($_SESSION) || (isset($_SESSION['error']) && $_SESSION['error'] == true)) {
+    ?>
+    <input type="text" name="username" class="tracking_input" id="username" value="Логин"><br/>
+    <input type="password" name="password" class="tracking_input" id="password" value="Пароль"><br/>
+    <input type="button" name="login" class="tracking_input" type="button" id="login" value="Вход">
+<?php
 }
+if(isset($_SESSION['user_id']) && $_SESSION['user_id'] > 0 ) {
+    $user = new UsersModel();
+    $user_data = $user->getTableDataById((int)$_SESSION['user_id']);
+    if($user_data[0]['role'] == 'admin') {
+        ?>
+        <div id="tabs">
+            <div class="header">
+                <ul class="tabs">
+                    <li><a href="#orders">Заказы</a></li>
+                    <li><a href="#contracts">Договора</a></li>
+                    <li><a href="#customers">Клиенты</a></li>
+                    <li><a href="#cars">Машины</a></li>
+                </ul>
 
-// Install
-if (!defined('DIR_APPLICATION')) {
-	header('Location: ../install/index.php');
-	exit;
+            </div>
+
+            <div id="orders">
+                <?php include(BASE_PATH . '/admin/view/orders_2.php'); ?>
+
+            </div>
+
+            <div id="contracts">
+                <?php include(BASE_PATH . '/admin/view/contracts_2.php'); ?>
+            </div>
+
+            <div id="customers">
+                <?php include(BASE_PATH . '/admin/view/customers_2.php'); ?>
+            </div>
+
+            <div id="cars">
+                <?php include(BASE_PATH . '/admin/view/cars_2.php'); ?>
+            </div>
+
+        </div>
+    <?php
+    }
+    else {
+        echo "У вас нет прав доступа к этой странице<br/>";
+        echo '<input type="button" name="logout" class="tracking_input " id="logout" value="Выход">';
+    }
 }
+?>
 
-// Startup
-require_once(DIR_SYSTEM . 'startup.php');
 
-// Registry
-$registry = new Registry();
 
-// Config
-$config = new Config();
-$registry->set('config', $config);
-
-// Database
-$db = new DB(DB_DRIVER, DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT);
-$registry->set('db', $db);
-
-// Settings
-$query = $db->query("SELECT * FROM " . DB_PREFIX . "setting WHERE store_id = '0'");
-
-foreach ($query->rows as $setting) {
-	if (!$setting['serialized']) {
-		$config->set($setting['key'], $setting['value']);
-	} else {
-		$config->set($setting['key'], json_decode($setting['value'], true));
-	}
-}
-
-// Loader
-$loader = new Loader($registry);
-$registry->set('load', $loader);
-
-// Url
-$url = new Url(HTTP_SERVER, $config->get('config_secure') ? HTTPS_SERVER : HTTP_SERVER);
-$registry->set('url', $url);
-
-// Log
-$log = new Log($config->get('config_error_filename'));
-$registry->set('log', $log);
-
-function error_handler($code, $message, $file, $line) {
-	global $log, $config;
-
-	// error suppressed with @
-	if (error_reporting() === 0) {
-		return false;
-	}
-
-	switch ($code) {
-		case E_NOTICE:
-		case E_USER_NOTICE:
-			$error = 'Notice';
-			break;
-		case E_WARNING:
-		case E_USER_WARNING:
-			$error = 'Warning';
-			break;
-		case E_ERROR:
-		case E_USER_ERROR:
-			$error = 'Fatal Error';
-			break;
-		default:
-			$error = 'Unknown';
-			break;
-	}
-
-	if ($config->get('config_error_display')) {
-		echo '<b>' . $error . '</b>: ' . $message . ' in <b>' . $file . '</b> on line <b>' . $line . '</b>';
-	}
-
-	if ($config->get('config_error_log')) {
-		$log->write('PHP ' . $error . ':  ' . $message . ' in ' . $file . ' on line ' . $line);
-	}
-
-	return true;
-}
-
-// Error Handler
-set_error_handler('error_handler');
-
-// Request
-$request = new Request();
-$registry->set('request', $request);
-
-// Response
-$response = new Response();
-$response->addHeader('Content-Type: text/html; charset=utf-8');
-$registry->set('response', $response);
-
-// Cache
-$cache = new Cache('file');
-$registry->set('cache', $cache);
-
-// Session
-$session = new Session();
-$registry->set('session', $session);
-
-// Language
-$languages = array();
-
-$query = $db->query("SELECT * FROM `" . DB_PREFIX . "language`");
-
-foreach ($query->rows as $result) {
-	$languages[$result['code']] = $result;
-}
-
-$config->set('config_language_id', $languages[$config->get('config_admin_language')]['language_id']);
-
-// Language
-$language = new Language($languages[$config->get('config_admin_language')]['directory']);
-$language->load($languages[$config->get('config_admin_language')]['directory']);
-$registry->set('language', $language);
-
-// Document
-$registry->set('document', new Document());
-
-// Currency
-$registry->set('currency', new Currency($registry));
-
-// Weight
-$registry->set('weight', new Weight($registry));
-
-// Length
-$registry->set('length', new Length($registry));
-
-// User
-$registry->set('user', new User($registry));
-
-// OpenBay Pro
-$registry->set('openbay', new Openbay($registry));
-
-// Event
-$event = new Event($registry);
-$registry->set('event', $event);
-
-$query = $db->query("SELECT * FROM " . DB_PREFIX . "event");
-
-foreach ($query->rows as $result) {
-	$event->register($result['trigger'], $result['action']);
-}
-
-// Front Controller
-$controller = new Front($registry);
-
-// Compile Sass
-$controller->addPreAction(new Action('common/sass'));
-
-// Login
-$controller->addPreAction(new Action('common/login/check'));
-
-// Permission
-$controller->addPreAction(new Action('error/permission/check'));
-
-// Router
-if (isset($request->get['route'])) {
-	$action = new Action($request->get['route']);
-} else {
-	$action = new Action('common/dashboard');
-}
-
-// Dispatch
-$controller->dispatch($action, new Action('error/not_found'));
-
-// Output
-$response->output();
