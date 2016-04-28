@@ -106,7 +106,7 @@ code {
         <ul class="slides">
 
             <a class="slide" href="?page=service#tab_1">
-            <div>Грузоперевозки: любые грузы, любые расстояния</div>
+            <div><?= BODY_REPAIR ?></div>
             <img class="main_banner_item" src="images/main_banner_1.jpg" href="">
             </a>
 

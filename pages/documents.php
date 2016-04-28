@@ -62,7 +62,7 @@
 		</div>
 
 		<div id="documents_2">
-		<p>В этом разделе вы найдёте уставные документы ООО «ВЛ-ТрансЛогистик», образцы договоров</p>
+		<p>В этом разделе вы найдёте уставные документы  <?= COMPANY_NAME ?>, образцы договоров</p>
 			<a style="border: 0; margin-left: 10px" target="_blank" title="Мосгорстат" href="downloads/gosstat.jpg" ><img src="/images/doc_preview_1.jpg" alt=""></a>
 			<a style="border: 0; margin-left: 10px" target="_blank" title="ИНН" href="downloads/inn.jpg" ><img src="/images/doc_preview_2.jpg" alt=""></a>
 			<a style="border: 0; margin-left: 10px" target="_blank" title="ОГРН" href="downloads/ogrn.jpg" ><img src="/images/doc_preview_3.jpg" alt=""></a>

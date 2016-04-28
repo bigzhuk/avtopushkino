@@ -13,7 +13,7 @@
 
 		<ul>
 		<div class="title">Сервис</div>
-			<li><a href="?page=service">Услуги</a></li>
+			<li><a href="?page=service">Услуги сервиса</a></li>
 			<li><a href="?page=tracking">Отслеживание груза</a></li>
 			<li><a href="?page=autopark">Наш автопарк</a></li>
 		</ul>
@@ -27,6 +27,6 @@
 
 	</div>
 	<div class="footer_bottom">
-	<p class="powered" style="float: right">ООО «ВЛ-ТрансЛогисик», 2014г. Все права защищены.</p>
+	<p class="powered" style="float: right">ООО «Авто-Пушкино», <?= date('Y')?>г. Все права защищены.</p>
 	</div>
 </div>

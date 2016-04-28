@@ -3,8 +3,8 @@
 
 	<a id="item_1" class="main_service_item" href="?page=service#service_1">
 		<div class="text">	
-			<div class="title">Кузовной ремонт</div>
-			любые грузы,<br> любые расстояния
+			<div class="title"><?= BODY_REPAIR ?></div>
+			покраска и полировка
 		</div>
 		<div class="arrow"></div>
 		<div class="bg" id="bg_1"></div>
@@ -12,8 +12,8 @@
 
 	<a id="item_2" class="main_service_item" href="?page=service#service_2">
 		<div class="text">	
-			<div class="title">Слесарный ремонт</div>
-			любой сложности:<br>от квартиры до склада
+			<div class="title"><?= ELECTRICS ?></div>
+			ремонт любой сложности
 		</div>
 		<div class="arrow"></div>
 		<div class="bg" id="bg_2"></div>
@@ -21,8 +21,8 @@
 
 	<a id="item_3" class="main_service_item" href="?page=service#service_3">
 		<div class="text">	
-			<div class="title">Ремонт трансмиссии</div>
-			оперативная доставка<br>от двери до двери
+			<div class="title"><?= TRANSMISSION_REPAIR ?></div>
+			АКПП, механика
 		</div>
 		<div class="arrow"></div>
 		<div class="bg" id="bg_3"></div>
@@ -30,8 +30,8 @@
 
 	<a id="item_4" class="main_service_item" href="?page=service#service_4">
 		<div class="text">	
-			<div class="title">Шиномонтаж</div>
-			готовое решение<br>для вашей компании
+			<div class="title"><?= TIRE_SERVICE ?></div>
+			быстро, без очередей
 		</div>
 		<div class="arrow"></div>
 		<div class="bg" id="bg_4"></div>
@@ -39,8 +39,8 @@
 
 	<a id="item_5" class="main_service_item" href="?page=service#service_5">
 		<div class="text">	
-			<div class="title">Техобслуживание</div>
-			профессиональный подход<br>к нестандартным задачам
+			<div class="title"><?= EVACUATOR ?></div>
+			Москва и область:<br/> круглосуточно, лучшие цены
 		</div>
 		<div class="arrow"></div>
 		<div class="bg" id="bg_5"></div>

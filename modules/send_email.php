@@ -10,7 +10,7 @@ if($_POST['button_click'] == 'send_access_to_user') {
 
     if(!empty($login) && !empty($password) && !empty($email)) {
         $mail = new PHPMailer;
-        $mail->From = 'site@vl-tl.ru';
+        $mail->From = 'robot@avtopushkino.ru';
         $mail->FromName = 'Робот';
         $mail->addAddress($email, '');
 
@@ -51,9 +51,9 @@ else{
         //$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
         //$mail->Port = 587;                                    // TCP port to connect to
 
-        $mail->From = 'site@vl-tl.ru';
+        $mail->From = 'robot@avtopushkino.ru';
         $mail->FromName = 'Робот';
-        $mail->addAddress('info@vl-tl.ru', '');                 // Add a recipient
+        $mail->addAddress('avtopushkino@mail.ru', '');                 // Add a recipient
         //$mail->addAddress('ellen@example.com');               // Name is optional
         //$mail->addReplyTo('info@example.com', 'Information');
         //$mail->addCC('cc@example.com');
@@ -64,7 +64,7 @@ else{
         //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
         $mail->isHTML(true);                                    // Set email format to HTML
 
-        $mail->Subject = 'Заявка с сайта vl-tl.ru';
+        $mail->Subject = 'Заявка с сайта avtopushkino.ru';
         $mail->Body    = 'Заявка от клиента на перевоз груза:<br/>'.
                          'Пункт отправления: '.$city_from.'<br/>'.
                          'Пункт назначения: '.$city_to.'<br/>'.
