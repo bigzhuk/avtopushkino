@@ -3,16 +3,10 @@
 		<div class="title">Онлайн запись</div>
 		<div class="kladr">	
 			<div class ="address">
-			<input class="text_input" type="text" name="location_1" id="distance_start_town" value="Телефон">
-			<input class="text_input" type="text" name="street_1" id="distance_start_street" value="Имя">
-			<input class="text_input" type="text" name="location_2" id="distance_finish_town" value="Марка авто">
-			<input class="text_input" type="text" name="street_2" id="distance_finish_street" value="Желаемая дата">
-			</div>
-			<div id="kladr_autocomplete">
-				<ul class="kladr_autocomplete_location" style="display: none;"></ul>
-				<div class="spinner kladr_autocomplete_location_spinner" style="display: none;"></div>
-				<ul class="kladr_autocomplete_street" style="display: none;"></ul>
-				<div class="spinner kladr_autocomplete_street_spinner" style="display: none;"></div>
+			<input class="text_input" type="text" id="phone" name="phone" value="Телефон">
+			<input class="text_input" type="text" id="user_name" name="user_name" value="Имя">
+			<input class="text_input" type="text" id="car_type" name="car_type" value="Марка авто">
+			<input class="text_input" type="text" id="wanted_date" name="wanted_date" value="Желаемая дата">
 			</div>
 		</div>
 
@@ -21,3 +15,30 @@
 	</div>
 </div>
 
+<script>
+	$(document).ready(function() {
+		$('#submit_distance').on('click', function () {
+			alert('a');
+			var phone = $('#phone').val();
+			var user_name = $('#user_name').val();
+			var car_type = $('#car_type').val();
+			var wanted_date = $('#wanted_date').val();
+			$.ajax({
+				async: false,
+				url: 'modules/send_email.php',
+				type: 'POST',
+				dataType: 'html',
+				data: {
+					phone: phone,
+					user_name: user_name,
+					car_type: car_type,
+					wanted_date: wanted_date,
+				},
+			}).done(function (data) {
+				if (data == '1') {
+					alert('Заявка отправлена. Оператор сервиса свяжется с вами в блиажйшее время.');
+				}
+			});
+		})
+	});
+</script>

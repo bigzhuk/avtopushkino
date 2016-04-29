@@ -1,44 +1,14 @@
 <?php
-require_once("../libs/PHPMailer-master/PHPMailerAutoload.php");
+require_once("../classes/SendMailSmtpClass.php");
+$send_mail = new SendMailSmtpClass();
 
+    $phone = $_POST['phone'];
+$phone =123;
+    $user_name = $_POST['user_name'];
+    $car_type = $_POST['car_type'];
+    $wanted_date = $_POST['wanted_date'];
 
-if($_POST['button_click'] == 'send_access_to_user') {
-
-    $login = $_POST['login'];
-    $password = $_POST['password'];
-    $email = $_POST['email'];
-
-    if(!empty($login) && !empty($password) && !empty($email)) {
-        $mail = new PHPMailer;
-        $mail->From = 'robot@avtopushkino.ru';
-        $mail->FromName = 'Робот';
-        $mail->addAddress($email, '');
-
-        $mail->WordWrap = 50;
-
-        $mail->isHTML(true);                                    // Set email format to HTML
-
-        $mail->Subject = 'Доступ к системе онлайн отслеживание грузов vl-tl.ru';
-        $mail->Body    = 'Добрый день. Для доступа к системе используйте, пожалуйста, следующие данные:<br/>'.
-                         '<strong>Логин:</strong> '. $login.'<br/>'.
-                         '<strong>Пароль:</strong> '.$password;
-        //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-        if(!$mail->send()) {
-            echo 'Message could not be sent.';
-            echo 'Mailer Error: ' . $mail->ErrorInfo;
-        } else {
-            echo '1'; // сообщение отправлено
-        }
-    }
-}
-else{
-    $user_email = $_POST['email'];
-    $user_phone = $_POST['phone'];
-    $city_from = $_POST['city_from']." ".$_POST['street_from'];
-    $city_to = $_POST['city_to']." ".$_POST['street_to'];
-
-    if(!empty($user_email) && !empty($city_from) && !empty($city_to)) {
+    if(!empty($phone)) {
         $mail = new PHPMailer;
 
         //$mail->SMTPDebug = 3;                                 // Enable verbose debug output
@@ -53,7 +23,8 @@ else{
 
         $mail->From = 'robot@avtopushkino.ru';
         $mail->FromName = 'Робот';
-        $mail->addAddress('avtopushkino@mail.ru', '');                 // Add a recipient
+        $mail->addAddress('bigzhuk@ya.ru');
+        //$mail->addAddress('avtopushkino@mail.ru', '');                 // Add a recipient
         //$mail->addAddress('ellen@example.com');               // Name is optional
         //$mail->addReplyTo('info@example.com', 'Information');
         //$mail->addCC('cc@example.com');
@@ -65,11 +36,11 @@ else{
         $mail->isHTML(true);                                    // Set email format to HTML
 
         $mail->Subject = 'Заявка с сайта avtopushkino.ru';
-        $mail->Body    = 'Заявка от клиента на перевоз груза:<br/>'.
-                         'Пункт отправления: '.$city_from.'<br/>'.
-                         'Пункт назначения: '.$city_to.'<br/>'.
-                         'Тел. клиента: '.$user_phone.'<br/>'.
-                         'E-mail клиента: '.$user_email.'<br/>';
+        $mail->Body    = 'Заявка от клиента на онлайн запись:<br/>'.
+                         'Телефон: '.$phone.'<br/>'.
+                         'Имя клиента: '.$user_name.'<br/>'.
+                         'Марка авто: '.$car_type.'<br/>'.
+                         'Желаемая дата: '.$wanted_date.'<br/>';
         //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
         if(!$mail->send()) {
@@ -78,7 +49,7 @@ else{
         } else {
             echo '1'; // сообщение отправлено
         }
-    }
+
 }
 
 
