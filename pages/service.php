@@ -2,18 +2,21 @@
 
 <div class="content" style="background: url('./images/auto_hr_3.jpg') no-repeat scroll right bottom #fff;">
 
-	<p style="margin-bottom: 25px">Наша компания готова помочь вам, с какой бы проблемой в области грузоперевозок вы не столкнулись.
-        Негабаритный или малогабаритный груз? Переезд или комплексные логистические услуги? Что бы Вас не интересовало,
-        мы всегда используем весь наш многолетний опыт для достижения наилучшего результата
-        и обеспечиваем индивидуальный подход к каждому клиенту.</p>
+	<p style="margin-bottom: 25px">Автосервис <?= COMPANY_NAME ?> предоставляет услуги  кузовного ремонта, ремонта КПП и любых иных
+        виов работ с автомобилем по оптимальным ценам.
+        Мы обеспечиваем проведение работ любого уровня сложности, предоставляем гарантию в зависимости от вида работ. Например,
+        гарантия на покарску детали составляет 10 лет.
+        Работая более 15 лет в области ремонта и технического обслуживания автомобилей, мы гарантируем отличный результа и разумные сроки.
+        Мы работаем только с качественными и проверенными материалами, полностью соблюдая технологии и регламент работ в соотвествии
+        с заводсткими техническими требованиями.</p>
 
 	<div id="tabs">
 		<ul class="tabs">
-			<li><a href="#service_1" id="colored_tabs_1">Грузоперевозки</a></li>
-			<li><a href="#service_2" id="colored_tabs_2">Переезды</a></li>
-			<li><a href="#service_3" id="colored_tabs_3">Малогабаритный груз</a></li>
-			<li><a href="#service_4" id="colored_tabs_4">Логистика под ключ</a></li>
-			<li><a href="#service_5" id="colored_tabs_5">Негабаритный груз</a></li>
+			<li><a href="#service_1" id="colored_tabs_1"><?= BODY_REPAIR ?></a></li>
+			<li><a href="#service_2" id="colored_tabs_2"><?= ELECTRICS ?></a></li>
+			<li><a href="#service_3" id="colored_tabs_3"><?= TRANSMISSION_REPAIR ?></a></li>
+			<li><a href="#service_4" id="colored_tabs_4"><?= TIRE_SERVICE ?></a></li>
+			<li><a href="#service_5" id="colored_tabs_5"><?= EVACUATOR ?></a></li>
 		</ul>
 
 
@@ -21,7 +24,7 @@
 			<hr class="blue" style="margin-bottom: 2px">
 			<div class="service_header_image" style="background-image:url('images/main_banner_1.jpg')"></div>
 			<hr class="blue">
-            <div class="service_title" id="s1">Грузоперевозки: любые грузы, любые расстояния</div>
+            <div class="service_title" id="s1">Кузовной ремонт: заводское качество</div>
 			<p>
                 Мы осуществляем грузоперевозки по всей России (в отдельных случаях по странам СНГ), но концентриуемся на
                 Москве и Московской области. Москва и Московская область это самый густонаселенный район РФ,

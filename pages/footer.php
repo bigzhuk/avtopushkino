@@ -1,5 +1,5 @@
 <div class="footer">
-	<div class="footer_links">
+	<!--<div class="footer_links">
 
 		<div class="footer_left"></div>
 		<div class="footer_right"></div>
@@ -25,7 +25,7 @@
 			<li><a href="?page=documents#tab_3">Частые вопросы</a></li>
 		</ul>
 
-	</div>
+	</div>-->
 	<div class="footer_bottom">
 	<p class="powered" style="float: right">ООО «Авто-Пушкино», <?= date('Y')?>г. Все права защищены.</p>
 	</div>

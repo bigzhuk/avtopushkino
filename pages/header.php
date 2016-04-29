@@ -41,7 +41,7 @@ define("COMPANY_NAME", "ООО «Авто-Пушкино»");
 			<div class="separator"></div>
 
 			<div class="main_menu_item">	
-				<a href="?page=service" class='button<?php if($_GET['page'] == 'service'){ echo ' active'; }?>'>Услуги</a>
+				<a href="?page=service" class='button<?php if($_GET['page'] == 'service'){ echo ' active'; }?>'>Услуги сервиса</a>
 				<ul>
 					<li><a href="?page=service#service_1"><?= BODY_REPAIR ?></a></li>
 					<li><a href="?page=service#service_2"><?= ELECTRICS ?></a></li>
@@ -53,64 +53,17 @@ define("COMPANY_NAME", "ООО «Авто-Пушкино»");
 
 			<div class="separator"></div>
 
-			<!-- <div class="main_menu_item">
-				<a href="?page=price" class='button<?php if($_GET['page'] == 'price'){ echo ' active'; }?>'>Цены</a>
-				<ul>
-					<li><a href="?page=price#price_1">Грузоперевозки</a></li>
-					<li><a href="?page=price#price_2">Переезды</a></li>
-					<li><a href="?page=price#price_3">Малогабаритный груз</a></li>
-					<li><a href="?page=price#price_4">Логистика под ключ</a></li>
-					<li><a href="?page=price#price_5">Негабаритный груз</a></li>
-				</ul>
-			</div>
- -->
-
-			<!-- <div class="main_menu_item">
-				<a href="?page=autopark" class='button<?php if($_GET['page'] == 'autopark'){ echo ' active'; }?>'>Автопарк</a>
-			</div> -->
-
-			<!-- <div class="separator"></div> -->
-
 			<div class="main_menu_item">
 				<a href="?page=special" class='button<?php if($_GET['page'] == 'special'){ echo ' active'; }?>'>Преимущества</a>
 			</div>
 
 			<div class="separator"></div>
 
-			<!-- <div class="main_menu_item">
-				<a href="?page=documents" class='button<?php if($_GET['page'] == 'documents'){ echo ' active'; }?>'>Информация</a>
-				<ul>
-					<li><a href="?page=documents#documents_1">Законодательство РФ</a></li>
-					<li><a href="?page=documents#documents_2">Уставные документы</a></li>
-					<li><a href="?page=documents#documents_3">Частые вопросы</a></li>
-					<li><a href="?page=news">Новости</a></li>
-
-				</ul>
-			</div> -->
-
-			<!-- <div class="separator"></div> -->
-
 			<div class="main_menu_item">
 				<a href="?page=contacts" class='button<?php if($_GET['page'] == 'contacts'){ echo ' active'; }?>'>Контакты</a>
 			</div>
 
 			<div class="separator"></div>
-
-			<!-- <div class="main_menu_item">
-				<a href="?page=about" class='button<?php if($_GET['page'] == 'about' || $_GET['page'] == 'partners'){ echo ' active'; }?>'>О компании</a>
-				<ul>
-					<li><a href="?page=about">О нас</a></li>
-					<li><a href="?page=partners">Наши партнеры</a></li>
-				</ul>
-			</div>
-
-			<div class="separator"></div>	 -->
-
-			<!-- <div class="main_menu_item">	
-				<a href="?page=tracking" class='button<?php if($_GET['page'] == 'tracking' || !isset($_GET['tracking'])){ echo ' tracking'; }?>'>Мониторинг</a>
-			</div>
-
-			<div class="separator"></div> -->
 
 		</div>
 		

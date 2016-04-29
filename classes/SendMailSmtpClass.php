@@ -19,7 +19,7 @@ class SendMailSmtpClass {
     public $smtp_port;
     public $smtp_charset;
 
-    public function __construct($smtp_username = 'design@spartak.ru', $smtp_password = '192168cocacola', $smtp_host = 'ssl://smtp.yandex.ru', $smtp_from = 'Asfaltkroshka.ru', $smtp_port = 465, $smtp_charset = "utf-8")
+    public function __construct($smtp_username = 'design@spartak.ru', $smtp_password = '192168cocacola', $smtp_host = 'ssl://smtp.yandex.ru', $smtp_from = 'avtopushkino.ru', $smtp_port = 465, $smtp_charset = "utf-8")
     {
         $this->smtp_username = $smtp_username;
         $this->smtp_password = $smtp_password;
@@ -47,7 +47,7 @@ class SendMailSmtpClass {
 
         $headers = "MIME-Version: 1.0\r\n";
         $headers .= "Content-type: text/html; charset=utf-8\r\n"; // кодировка письма
-        $headers .= "From: Dadget Service <design@spartak.ru>\r\n"; // от кого письмо
+        $headers .= "From: avtopushkino.ru <robot@avtopushkino.ru>\r\n"; // от кого письмо
 
         $contentMail .= $headers . "\r\n";
         $contentMail .= $message . "\r\n";

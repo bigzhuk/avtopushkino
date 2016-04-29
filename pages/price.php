@@ -1,7 +1,7 @@
 <div class="content">
 	<div id="tabs">
 		<ul class="tabs">
-			<li><a href="#price_1">Грузоперевозки</a></li>
+			<li><a href="#price_1"><?= BODY_REPAIR ?></a></li>
 			<li><a href="#price_2">Переезды</a></li>
 			<li><a href="#price_3">Малогабаритный груз</a></li>
 			<li><a href="#price_4">Логистика</a></li>

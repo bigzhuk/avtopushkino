@@ -11,14 +11,12 @@
 		</div>
 
 		<input type="button" id="submit_distance" value="Записаться">
-
 	</div>
 </div>
 
 <script>
 	$(document).ready(function() {
 		$('#submit_distance').on('click', function () {
-			alert('a');
 			var phone = $('#phone').val();
 			var user_name = $('#user_name').val();
 			var car_type = $('#car_type').val();
@@ -33,10 +31,17 @@
 					user_name: user_name,
 					car_type: car_type,
 					wanted_date: wanted_date,
+					mail_secret: 'etyI67siujA'
 				},
 			}).done(function (data) {
-				if (data == '1') {
+				if (data == '3' || data == '4') {
 					alert('Заявка отправлена. Оператор сервиса свяжется с вами в блиажйшее время.');
+				}
+				else if(data == '1') {
+					alert('Заявка не отправлена. Вы неверно заполнили телефон.');
+				}
+				else if(data == '2' || data == '5') {
+					alert('Заявка не отправлена. На сервере проводятся технические работы');
 				}
 			});
 		})
