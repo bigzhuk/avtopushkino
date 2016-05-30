@@ -18,7 +18,7 @@
 		</div>
 
 		<a class="banner_center" style="background:url('./images/banner_1.jpg')">
-		<div class="text" href="">Ночные перевозки стали ещё доступнее!</div>
+		<div class="text" href="">Круглосуточный выезд эквакуатора!</div>
 		</a>
 
 		<div class="content" style="background: url('./images/auto_hr_1.jpg') no-repeat scroll right bottom #fff;">
@@ -47,7 +47,7 @@
 				Столичные власти сообщили, что до конца 2014 года в Москве на всей протяженности МКАДа и ТТК будут установлены новые дорожные знаки с подсветкой обозначения.
 			</p>
 		</div>
-		<a href="?page=news">Все новости</a>
+		<a href="/news">Все новости</a>
 	</div>
 
 	

@@ -1,5 +1,3 @@
-<!-- <span class="todo"> #Отформатировать списки. Добавить перекрестные ссылки на договора. Информация о пропуск в ТТК, охрана груза, <br>страхование (АльфаСтрахование, Ренессанс, ВСК-страхование, Росгосстрах). Сделать значёк внимание ярче.</span> -->
-
 <div class="content" style="background: url('./images/auto_hr_3.jpg') no-repeat scroll right bottom #fff;">
 
 	<p style="margin-bottom: 25px">Автосервис <?= COMPANY_NAME ?> предоставляет услуги  кузовного ремонта, ремонта КПП и любых иных
@@ -46,7 +44,7 @@
 
             <p>
                 Вот уже более трёх лет мы на деле доказываем выскоий уровень наших услуг и сервиса!
-                <a href="?page=autopark">Современный автомобильный</a> парк грузоподъемностью от 0,5 до 20
+                <a href="/autopark">Современный автомобильный</a> парк грузоподъемностью от 0,5 до 20
                 тонн позволяет предложить Вам наиболее дешевый способ грузоперевозки на автомобилях, как отечественных,
                 так и зарубежных. Наша техника имеет все необходимые документы и пропуска на въезд в центр Москвы,
                 будь то заказ газели или перевозка на еврофуре. Если будет необходимо мы предоставим вам наших грузчиков.
@@ -180,7 +178,7 @@
                 <div class="service_header_image" style="background-image:url('images/main_banner_2.jpg')"></div>
             <hr class="blue">
 
-            <div class="service_title" id="s2">Переезды любой сложности: от квартиры до склада</div>
+            <div class="service_title" id="s2"><?=ELECTRICS?>: ремонт любой сложности</div>
 
             <p>
                 Итак, Вы столкнулись с необходимостью переехать. Большинство жителей России ассоциируют переезд со
@@ -255,7 +253,7 @@
             <div class="service_header_image" style="background-image:url('images/main_banner_3.jpg')"></div>
             <hr class="blue">
 
-            <div class="service_title" id="s3">Малогабаритный груз: оперативная доставка от двери до двери</div>
+            <div class="service_title" id="s3"><?= TRANSMISSION_REPAIR ?>: АКПП, механика</div>
 
             <p>
                 Приоритетным направлением в перевозке малогабаритных грузов для нас является Москва и Московская область.
@@ -281,7 +279,7 @@
             <div class="service_header_image" style="background-image:url('images/main_banner_4.jpg')"></div>
             <hr class="blue">
 
-            <div class="service_title" id="s4">Логистика под ключ: готовое решение для вашей компании</div>
+            <div class="service_title" id="s4"><?= TIRE_SERVICE?>:  быстро, без очередей</div>
             <div class="img_right" img="images/image_5.jpg"></div>
 
             <p>
@@ -302,7 +300,7 @@
                     <li>Полная загрузка персонала (Вам не нужно нанимать водителей в штат, если доставка необходима только утром и вечером)</li>
                     <li>Остуствие сложностей с ремонтом автопарка</li>
                     <li>Избавление от непрофильных активов и нецелевых трат</li>
-                    <li><a href="index.php?page=tracking">Cервис онлайн отслеживания транспорта</a></li>
+                    <li><a href="index.php?/tracking">Cервис онлайн отслеживания транспорта</a></li>
 
                 </ul>
                 
@@ -314,7 +312,7 @@
             <hr class="blue" style="margin-bottom: 2px">
             <div class="service_header_image" style="background-image:url('images/main_banner_5.jpg')"></div>
             <hr class="blue">
-            <div class="service_title" id="s5">Негабаритный груз: профессиональный подход к нестандартным задачам</div>
+            <div class="service_title" id="s5"><?= EVACUATOR ?>: Москва и область. Куруглосуточно. Лучшие цены.</div>
            
             <div class="img_right" img="images/image_4.jpg"></div>
             <p>

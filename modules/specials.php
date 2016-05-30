@@ -17,10 +17,10 @@
 <div class="spezials_slideshow">
     <ul class="spezials">
 
-        <a class="spezial" href="?page=special" style="background:url(images/special_1_s.png) center center no-repeat transparent"></a>
-        <a class="spezial" href="?page=special" style="background:url(images/special_2_s.png) center center no-repeat transparent"></a>
-        <a class="spezial" href="?page=special" style="background:url(images/special_3_s.png) center center no-repeat transparent"></a>
-        <a class="spezial" href="?page=special" style="background:url(images/special_4_s.png) center center no-repeat transparent"></a>
+        <a class="spezial" href="/special" style="background:url(images/special_1_s.png) center center no-repeat transparent"></a>
+        <a class="spezial" href="/special" style="background:url(images/special_2_s.png) center center no-repeat transparent"></a>
+        <a class="spezial" href="/special" style="background:url(images/special_3_s.png) center center no-repeat transparent"></a>
+        <a class="spezial" href="/special" style="background:url(images/special_4_s.png) center center no-repeat transparent"></a>
 
     </ul>
 </div>

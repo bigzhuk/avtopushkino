@@ -105,28 +105,28 @@ code {
 
         <ul class="slides">
 
-            <a class="slide" href="?page=service#tab_1">
+            <a class="slide" href="/service#tab_1">
             <div><?= BODY_REPAIR ?></div>
             <img class="main_banner_item" src="images/main_banner_1.jpg" href="">
             </a>
 
-            <a class="slide" href="?page=service#tab_2">
+            <a class="slide" href="/service#tab_2">
             <div>Переезды любой сложности: от квартиры до склада</div>
             <img class="main_banner_item" src="images/main_banner_2.jpg">
             </a>
 
-            <a class="slide" href="?page=service#tab_3">
+            <a class="slide" href="/service#tab_3">
             <div>Малогабаритный груз: оперативная доставка от двери до двери</div>
             <img class="main_banner_item" src="images/main_banner_3.jpg" href="">
             </a>
 
-            <a class="slide" href="?page=service#tab_4">
+            <a class="slide" href="/service#tab_4">
             <div>Логистика под ключ: готовое решение для вашей компании</div>
             <img class="main_banner_item" src="images/main_banner_4.jpg" href="">
             </a>
 
-            <a class="slide" href="?page=service#tab_5">
-            <div>Негабаритный груз: профессиональный подход к нестандартным задачам</div>
+            <a class="slide" href="/service#tab_5">
+            <div>Тест</div>
             <img class="main_banner_item" src="images/main_banner_5.jpg" href="">
             </a>
 

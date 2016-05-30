@@ -15,7 +15,7 @@ define("COMPANY_NAME", "ООО «Авто-Пушкино»");
 
 	<div class="header_top">
 		<div class="center_top" >
-			<a class="header_left" href="?page=home">	
+			<a class="header_left" href="/home">	
 				<div style="background: url('images/logo.png') no-repeat scroll center center transparent; margin-left: 10px; margin-top:5px; margin-right: 20px" class="logo"></div>
 			</a>
 
@@ -35,32 +35,32 @@ define("COMPANY_NAME", "ООО «Авто-Пушкино»");
 			<div class="separator"></div>	
 
 			<div class="main_menu_item">	
-				<a href="?page=home" class='button<?php if($_GET['page'] == 'home' || !isset($_GET['page'])){ echo ' active'; }?>'>Главная</a>
+				<a href="/home" class='button<?php if($_GET['page'] == 'home' || !isset($_GET['page'])){ echo ' active'; }?>'>Главная</a>
 			</div>
 
 			<div class="separator"></div>
 
 			<div class="main_menu_item">	
-				<a href="?page=service" class='button<?php if($_GET['page'] == 'service'){ echo ' active'; }?>'>Услуги сервиса</a>
+				<a href="/service" class='button<?php if($_GET['page'] == 'service'){ echo ' active'; }?>'>Услуги и цены</a>
 				<ul>
-					<li><a href="?page=service#service_1"><?= BODY_REPAIR ?></a></li>
-					<li><a href="?page=service#service_2"><?= ELECTRICS ?></a></li>
-					<li><a href="?page=service#service_3"><?= TRANSMISSION_REPAIR ?></a></li>
-					<li><a href="?page=service#service_4"><?= TIRE_SERVICE ?></a></li>
-					<li><a href="?page=service#service_5"><?= EVACUATOR ?></a></li>
+					<li><a href="/service#service_1"><?= BODY_REPAIR ?></a></li>
+					<li><a href="/service#service_2"><?= ELECTRICS ?></a></li>
+					<li><a href="/service#service_3"><?= TRANSMISSION_REPAIR ?></a></li>
+					<li><a href="/service#service_4"><?= TIRE_SERVICE ?></a></li>
+					<li><a href="/service#service_5"><?= EVACUATOR ?></a></li>
 				</ul>
 			</div>
 
 			<div class="separator"></div>
 
 			<div class="main_menu_item">
-				<a href="?page=special" class='button<?php if($_GET['page'] == 'special'){ echo ' active'; }?>'>Преимущества</a>
+				<a href="/special" class='button<?php if($_GET['page'] == 'special'){ echo ' active'; }?>'>Преимущества</a>
 			</div>
 
 			<div class="separator"></div>
 
 			<div class="main_menu_item">
-				<a href="?page=contacts" class='button<?php if($_GET['page'] == 'contacts'){ echo ' active'; }?>'>Контакты</a>
+				<a href="/contacts" class='button<?php if($_GET['page'] == 'contacts'){ echo ' active'; }?>'>Контакты</a>
 			</div>
 
 			<div class="separator"></div>

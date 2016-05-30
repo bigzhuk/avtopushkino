@@ -51,23 +51,23 @@
 	<div class="partners_slideshow">
         <ul class="partners">
 
-            <a class="partner" href="?page=partners">
+            <a class="partner" href="/partners">
             <img class="partner_item" src="images/partner_1.jpg" href="">
             </a>
 
-            <a class="partner" href="?page=partners">
+            <a class="partner" href="/partners">
             <img class="partner_item" src="images/partner_2.jpg">
             </a>
 
-            <a class="partner" href="?page=partners">
+            <a class="partner" href="/partners">
             <img class="partner_item" src="images/partner_3.jpg" href="">
             </a>
 
-            <a class="partner" href="?page=partners">
+            <a class="partner" href="/partners">
             <img class="partner_item" src="images/partner_4.jpg" href="">
             </a>
 
-            <!-- <a class="partner" href="?page=partners">
+            <!-- <a class="partner" href="/partners">
             <img class="partner_item" src="images/partner_5.jpg" href="">
             </a> -->
 
