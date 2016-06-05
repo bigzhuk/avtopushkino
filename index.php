@@ -3,8 +3,13 @@
 	const COMPANY_NAME = 'Авто-Пушкино';
 
 	public static $phones = array(
-		'88888888',
-		'99999999'
+		'8(926)464-98-98',
+		'8(903)167-99-07'
+	);
+
+	public static $services = array(
+		0 => array ('title'=>'Кузовной ремонт', 'slogan'=>'заводское качество'),
+		1 => array ('title'=>'...', 'slogan'=>'...'),
 	);
 
 	public static  $pages = array(

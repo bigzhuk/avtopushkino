@@ -106,27 +106,27 @@ code {
         <ul class="slides">
 
             <a class="slide" href="/service#tab_1">
-            <div><?= BODY_REPAIR ?></div>
+            <div>Гарантия на ремнот двигателя и КПП</div>
             <img class="main_banner_item" src="images/main_banner_1.jpg" href="">
             </a>
 
             <a class="slide" href="/service#tab_2">
-            <div>Переезды любой сложности: от квартиры до склада</div>
+            <div>Скидки нашим клиентам на сход-развал и шиномонтаж</div>
             <img class="main_banner_item" src="images/main_banner_2.jpg">
             </a>
 
             <a class="slide" href="/service#tab_3">
-            <div>Малогабаритный груз: оперативная доставка от двери до двери</div>
+            <div>Полное восстановление авто после аварии</div>
             <img class="main_banner_item" src="images/main_banner_3.jpg" href="">
             </a>
 
             <a class="slide" href="/service#tab_4">
-            <div>Логистика под ключ: готовое решение для вашей компании</div>
+            <div>Компьютерный подбор цвета при покраске</div>
             <img class="main_banner_item" src="images/main_banner_4.jpg" href="">
             </a>
 
             <a class="slide" href="/service#tab_5">
-            <div>Тест</div>
+            <div>Подстагарантийное техническое обслуживание</div>
             <img class="main_banner_item" src="images/main_banner_5.jpg" href="">
             </a>
 

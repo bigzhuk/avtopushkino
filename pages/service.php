@@ -20,7 +20,7 @@
 
 		<div id="service_1">
 			<hr class="blue" style="margin-bottom: 2px">
-			<div class="service_header_image" style="background-image:url('images/main_banner_1.jpg')"></div>
+			<div class="service_header_image" style="background-image:url('images/main_banner_4.jpg')"></div>
 			<hr class="blue">
             <div class="service_title" id="s1">Кузовной ремонт: заводское качество</div>
 			<p>
@@ -175,7 +175,7 @@
 
 		<div id="service_2">
             <hr class="blue" style="margin-bottom: 2px">
-                <div class="service_header_image" style="background-image:url('images/main_banner_2.jpg')"></div>
+                <div class="service_header_image" style="background-image:url('images/main_banner_5.jpg')"></div>
             <hr class="blue">
 
             <div class="service_title" id="s2"><?=ELECTRICS?>: ремонт любой сложности</div>
@@ -250,7 +250,7 @@
 
 		<div id="service_3">
             <hr class="blue" style="margin-bottom: 2px">
-            <div class="service_header_image" style="background-image:url('images/main_banner_3.jpg')"></div>
+            <div class="service_header_image" style="background-image:url('images/main_banner_2.jpg')"></div>
             <hr class="blue">
 
             <div class="service_title" id="s3"><?= TRANSMISSION_REPAIR ?>: АКПП, механика</div>

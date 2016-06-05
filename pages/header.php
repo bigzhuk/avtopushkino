@@ -35,13 +35,13 @@ define("COMPANY_NAME", "ООО «Авто-Пушкино»");
 			<div class="separator"></div>	
 
 			<div class="main_menu_item">	
-				<a href="/home" class='button<?php if($_GET['page'] == 'home' || !isset($_GET['page'])){ echo ' active'; }?>'>Главная</a>
+				<a href="/home" class='button<?php if($_SERVER['REQUEST_URI'] == '/home' || $_SERVER['REQUEST_URI'] == '/'){ echo ' active'; }?>'>Главная</a>
 			</div>
 
 			<div class="separator"></div>
 
 			<div class="main_menu_item">	
-				<a href="/service" class='button<?php if($_GET['page'] == 'service'){ echo ' active'; }?>'>Услуги и цены</a>
+				<a href="/service" class='button<?php if($_SERVER['REQUEST_URI'] == '/service'){ echo ' active'; }?>'>Услуги и цены</a>
 				<ul>
 					<li><a href="/service#service_1"><?= BODY_REPAIR ?></a></li>
 					<li><a href="/service#service_2"><?= ELECTRICS ?></a></li>
@@ -54,13 +54,13 @@ define("COMPANY_NAME", "ООО «Авто-Пушкино»");
 			<div class="separator"></div>
 
 			<div class="main_menu_item">
-				<a href="/special" class='button<?php if($_GET['page'] == 'special'){ echo ' active'; }?>'>Преимущества</a>
+				<a href="/parts_sale" class='button<?php if($_SERVER['REQUEST_URI'] == '/parts_sale'){ echo ' active'; }?>'>Запчасти</a>
 			</div>
 
 			<div class="separator"></div>
 
 			<div class="main_menu_item">
-				<a href="/contacts" class='button<?php if($_GET['page'] == 'contacts'){ echo ' active'; }?>'>Контакты</a>
+				<a href="/contacts" class='button<?php if($_SERVER['REQUEST_URI'] == '/contacts'){ echo ' active'; }?>'>Контакты</a>
 			</div>
 
 			<div class="separator"></div>

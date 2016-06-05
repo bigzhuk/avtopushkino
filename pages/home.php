@@ -9,7 +9,6 @@
 	<div class="content_right">
 		<?php include('modules/service.php'); ?>
 		<div id="map" class="smallMap"></div>
-		<?php include('modules/partners.php'); ?>
 	</div>
 
 	<div style="margin-right: 265px;">	
