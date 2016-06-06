@@ -5,8 +5,8 @@ define ("EMAIL", "<script type=\"text/javascript\">eval(unescape('%64%6f%63%75%6
 
 define("BODY_REPAIR",  "Кузовной ремонт");
 define("ELECTRICS",  "Электрика");
-define("TRANSMISSION_REPAIR",  "Ремонт трансмиссии");
-define("TIRE_SERVICE",  "Шиномонтаж");
+define("TRANSMISSION_REPAIR",  "Ремонт двигателя и КПП");
+define("TIRE_SERVICE",  "Шиномонтаж и сход-развал");
 define("EVACUATOR",  "Эвакуатор");
 define("COMPANY_NAME", "ООО «Авто-Пушкино»");
 
@@ -18,7 +18,13 @@ define("COMPANY_NAME", "ООО «Авто-Пушкино»");
 			<a class="header_left" href="/home">	
 				<div style="background: url('images/logo.png') no-repeat scroll center center transparent; margin-left: 10px; margin-top:5px; margin-right: 20px" class="logo"></div>
 			</a>
-
+			<div style=" float: left;
+            font-size: 34px;
+            color: white;
+            font-style: italic;
+            margin-top: 22px;">
+			 - сервис, которому доверяю.
+			</div>
 			<div class="phone" style="padding-top:6px">
 				8 (499) 394-32-25<br>
 				8 (495) 778-75-07<br>

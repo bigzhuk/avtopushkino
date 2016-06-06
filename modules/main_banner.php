@@ -106,27 +106,27 @@ code {
         <ul class="slides">
 
             <a class="slide" href="/service#tab_1">
-            <div>Гарантия на ремнот двигателя и КПП</div>
+            <div>Компьютерный подбор цвета при покраске</div>
             <img class="main_banner_item" src="images/main_banner_1.jpg" href="">
             </a>
 
             <a class="slide" href="/service#tab_2">
-            <div>Скидки нашим клиентам на сход-развал и шиномонтаж</div>
-            <img class="main_banner_item" src="images/main_banner_2.jpg">
+            <div>Ремонт электрики сертифицированными мастерами</div>
+            <img class="main_banner_item" src="images/main_banner_2.jpg" href="">
             </a>
 
             <a class="slide" href="/service#tab_3">
-            <div>Полное восстановление авто после аварии</div>
+            <div>Гарантия на ремнот двигателя и КПП</div>
             <img class="main_banner_item" src="images/main_banner_3.jpg" href="">
             </a>
 
             <a class="slide" href="/service#tab_4">
-            <div>Компьютерный подбор цвета при покраске</div>
+            <div>Скидки на сход-развал и шиномотнаж</div>
             <img class="main_banner_item" src="images/main_banner_4.jpg" href="">
             </a>
 
             <a class="slide" href="/service#tab_5">
-            <div>Подстагарантийное техническое обслуживание</div>
+            <div>Круглосуточный выезд эквакуатора в г. Пушкино</div>
             <img class="main_banner_item" src="images/main_banner_5.jpg" href="">
             </a>
 
