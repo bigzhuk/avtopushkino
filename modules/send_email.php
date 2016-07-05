@@ -9,7 +9,7 @@ $send_mail = new SendMailSmtpClass();
     $token = $_POST['mail_secret'];
 
 
-$mailto = 'bigzhuk@ya.ru';
+$mailto = 'avtopushkino@mail.ru';
 $subject = 'Заявка с  сайта avtopushkino.ru';
 $message = 'Телефон: '.$phone.'<br>
             Имя: '.$user_name.'<br>

@@ -126,7 +126,7 @@ code {
             </a>
 
             <a class="slide" href="/service#tab_5">
-            <div>Круглосуточный выезд эквакуатора в г. Пушкино</div>
+            <div>Круглосуточный выезд эквакуатора в г. Пушкино <?=\App::$phones[0]?></div>
             <img class="main_banner_item" src="images/main_banner_5.jpg" href="">
             </a>
 

@@ -25,8 +25,8 @@ define("COMPANY_NAME", "ООО «Авто-Пушкино»");
 			 - сервис, которому доверяю.
 			</div>
 			<div class="phone" style="padding-top:6px">
-				8 (499) 394-32-25<br>
-				8 (495) 778-75-07<br>
+				<?= \App::$phones[0]?><br>
+				<?= \App::$phones[1]?><br>
 				<span class="mail_header">
 					<?= EMAIL ?>
 				</span>
